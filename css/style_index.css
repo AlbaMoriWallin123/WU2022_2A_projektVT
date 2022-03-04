@@ -7,29 +7,43 @@
 #grid_wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 340px 90px 1100px;
+    grid-template-rows: 340px 90px 900px 160px;
     grid-template-areas: 
         "he"
         "na"
         "se"
+        "fo"
     ;
+    gap: 3px;
+}
+
+body {
+    background-color: black;
 }
 
 header {
     grid-area: he;
-    background-color: aqua;
+    background-color: white;
 }
 
 nav {
     grid-area: na;
-    background-color: aquamarine;    
-
+    background-color: white;    
 }
 
-.hund {
-    height: 380px;
-    width: 320px;
+section {
+    grid-area: se;
+    background-color: white;
 }
+
+footer {
+    grid-area: fo;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+
+/* grund, meny & meny2 */
 
 #meny {
     display: flex;
@@ -46,8 +60,60 @@ nav {
     font-size: 40px;
 }
 
-section {
-    grid-area: se;
+.meny_lankar:hover {
+    font-size: 42px;
+    color: rgb(153, 152, 152);
+}
+
+#meny_2 {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    align-items: center;
+    list-style: none;
+    margin-left: 70px;
+}
+
+#kontaktuppgifter {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    height: 80%;
+}
+
+.footer_lankar {
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+}
+
+.footer_lankar:hover {
+    font-size: 28px;
+    color: rgb(153, 152, 152);
+}
+
+.kontakt_titlar {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: rgb(49, 49, 49);
+}
+
+.nummer {
+    font-size: 20px;
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+/* index, butik */
+
+.hund {
+    height: 340px;
+    width: 320px;
 }
 
 #produkter {
@@ -59,4 +125,95 @@ section {
     align-content: space-around;
 
 }
+
+.verk {
+    position: relative;
+}
+
+.produkt_info_ruta {
+    display: none;
+    position: absolute;
+    bottom: 4px;
+    height: 40%;
+    width: 100%;
+    background-color: green;
+}
+
+.hund:hover + .produkt_info_ruta {
+    display: block;
+}
+
+.produkt_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* om oss */
+
+.om_bild {
+    height: 350px;
+    width: 500px;
+}
+
+#om_sidan {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.om_text {
+    height: 350px;
+    width: 500px;
+    display: flex;
+}
+
+/* kundservice, något */
+
+#zoom_vaska  {
+    height: 800px;
+    width: 550px;
+}
+
+#hjalpsida {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.guide {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#info_rutor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.guide_text {
+
+}
+
+/* varukorg */
+/* allt */
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+
+@media screen and (min-width: 800px)
+
 
