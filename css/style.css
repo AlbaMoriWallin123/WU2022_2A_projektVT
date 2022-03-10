@@ -17,6 +17,10 @@
     gap: 3px;
 }
 
+#burger {
+    display: none;
+}
+
 body {
     background-color: black;
 }
@@ -24,6 +28,8 @@ body {
 header {
     grid-area: he;
     background-color: white;
+    display: grid;
+    place-items: center;
 }
 
 nav {
@@ -63,6 +69,11 @@ footer {
 .meny_lankar:hover {
     font-size: 42px;
     color: rgb(153, 152, 152);
+}
+
+#huvud_bild {
+    height: 340px;
+
 }
 
 #meny_2 {
@@ -109,6 +120,11 @@ footer {
     align-items: center;
 }
 
+#zoom {
+    text-align: center;
+    transform-origin: center top;
+}
+
 /* index, butik */
 
 .hund {
@@ -123,7 +139,6 @@ footer {
     height: 100%;
     justify-content: space-evenly;
     align-content: space-around;
-
 }
 
 .verk {
@@ -214,6 +229,140 @@ h2 {
     font-weight: lighter;
 }
 
-@media screen and (min-width: 800px)
+
+@media screen and (max-width: 800px) {
+
+    #grid_wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 90px 2500px 180px;
+        grid-template-areas: 
+            "he"
+            "na"
+            "se"
+            "fo"
+        ;
+        gap: 3px;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    header {
+        grid-area: he;
+        background-color: white;
+        display: grid;
+        place-items: center;
+    }
+    
+    section {
+        grid-area: se;
+        background-color: white;
+    }
+    
+    footer {
+        grid-area: fo;
+        display: flex;
+        background-color: white;
+        justify-content: space-evenly;
+    }
+
+    #meny_2 {
+        display: none;
+    }
+    
+    .produkt_info_ruta {
+        display: none;
+    }
+
+    .produkt_info_ruta_visa {
+        position: absolute;
+        bottom: 4px;
+        height: 40%;
+        width: 100%;
+        background-color: navajowhite;
+    }
+
+    .om_text {
+        height: 244px;
+        width: 330px;
+        display: flex;
+    }
+
+    .om_bild {
+        height: 245px;
+        width: 350px;
+    }
+
+    #om_sidan {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #myBtn { /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        background: transparent;
+        border: 0;
+    }
+
+    #pil {
+        height: 50px;
+    }
+      
+    #myBtn:hover {
+        filter: brightness(110%);
+    }
+
+    #meny {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 500px;
+        align-items: center;
+        background-color: aqua;
+        position: absolute;
+        right: 0;
+        top: -500px;
+        width: 200px;
+        list-style: none;
+        transition: all 0,5;
+    }
+
+    .meny-active {
+        transform: translateY(600px);
+    }
+
+    .burger_line {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(223,144,70);
+        margin: 5px;
+        border-radius: 10%;
+        transition: all 0.5s;
+    }
+
+    .crossed_line #line_2 {
+        opacity: 0;
+    }
+        
+    .crossed_line #line_1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .crossed_line #line_3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    #burger {
+        display: block;
+        margin-right: 87.5px;
+        cursor: pointer;
+    }
+}
 
 
