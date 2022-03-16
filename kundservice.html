@@ -11,17 +11,26 @@
 
     <div id="grid_wrapper">
 
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="/img/pil.png" alt="pil" id="pil"></button>
+
         <header>
             <h1 id="zoom">Namn på min sak</h1>
         </header>
         
         <nav>
-            <ul id="meny">
+            <ul class="meny">
                 <li> <a href="index.html" class="meny_lankar">BUTIK</a> </li> 
                 <li> <a href="om_oss.html" class="meny_lankar">OM OSS</a> </li>
                 <li> <a href="kundservice.html" class="meny_lankar">NÅGOT</a> </li>
                 <li> <a href="varukorg.html" class="meny_lankar">VARUKORG</a></li>
             </ul>
+            
+            <div id="burger">
+                <div id="line_1" class="burger_line"></div>
+                <div id="line_2" class="burger_line"></div>
+                <div id="line_3" class="burger_line"></div>
+            </div>
+
         </nav>
 
         <section id="hjalpsida">
@@ -37,32 +46,30 @@
             
                 <div class="guide">
                     <h2>BESTÄLLNING & LEVERANS</h2>
-                    <p class="guide_text">Lorem ipsum dolor sit amet Eveniet voluptatibus qui ab rem nemo. Asperiores reiciendis fuga deleniti, neque maiores quasi unde vero consequuntur voluptates consectetur nemo laudantium inventore eveniet impedit repellat quis consequatur excepturi. Ipsam, commodi rem, fugit aliquam necessitatibus possimus magni nihil mollitia tenetur totam a nisi dolore quaerat maiores ullam hic libero fuga voluptate, unde facilis. Quo, voluptatibus sit? Laborum explicabo modi perferendis repudiandae sit suscipit voluptatibus consectetur fuga omnis perspiciatis? Cupiditate itaque vel, nobis accusamus architecto officia a molestias tenetur maiores omnis accusantium. Laborum dignissimos libero mollitia aut placeat debitis excepturi distinctio quis soluta eius?</p>
+                    <p>Lorem ipsum dolor sit amet Eveniet voluptatibus qui ab rem nemo. Asperiores reiciendis fuga deleniti, neque maiores quasi unde vero consequuntur voluptates consectetur nemo laudantium inventore eveniet impedit repellat quis consequatur excepturi. Ipsam, commodi rem, fugit aliquam necessitatibus possimus magni nihil mollitia tenetur totam a nisi dolore quaerat maiores ullam hic libero fuga voluptate, unde facilis. Quo, voluptatibus sit? Laborum explicabo modi perferendis repudiandae sit suscipit voluptatibus consectetur fuga omnis perspiciatis? Cupiditate itaque vel, nobis accusamus architecto officia a molestias tenetur maiores omnis accusantium. Laborum dignissimos libero mollitia aut placeat debitis excepturi distinctio quis soluta eius?</p>
                 </div>
 
                 <div class="guide">
                     <h2>RETUR & ÅTERBETALNIG</h2>
-                    <p class="guide_text">ecati odio dolores, perferendis ipsam sit illo atque ab laborum. Quas nulla delectus laborum nihil ratione animi praesentium fugiat aut sint assumenda eveniet veniam, architecto amet accusantium modi dolor ducimus eum. Iure aut quidem qui quos dignissimos voluptate doloremque consectetur sint assumenda ratione fugiat vero quasi rem dolorum, quibusdam maxime? Vero laboriosam dignissimos accusamus numquam, dolores laudantium repudiandae et eum, impedit vel nostrum temporibus eaque excepturi, adipisci iusto eveniet rerum beatae natus corporis.</p>
+                    <p>ecati odio dolores, perferendis ipsam sit illo atque ab laborum. Quas nulla delectus laborum nihil ratione animi praesentium fugiat aut sint assumenda eveniet veniam, architecto amet accusantium modi dolor ducimus eum. Iure aut quidem qui quos dignissimos voluptate doloremque consectetur sint assumenda ratione fugiat vero quasi rem dolorum, quibusdam maxime? Vero laboriosam dignissimos accusamus numquam, dolores laudantium repudiandae et eum, impedit vel nostrum temporibus eaque excepturi, adipisci iusto eveniet rerum beatae natus corporis.</p>
                 </div>
             </div>
 
-            <div>
-                <img src="/img/hund7.jpg" alt="hund7" id="zoom_vaska">
-            </div>
+            <img src="/img/hund7.jpg" alt="hund7" id="zoom_vaska">
 
         </section>
 
         <footer>
 
-            <div id="kontaktuppgifter">
+            <nav id="kontaktuppgifter">
                 <h2>KONTAKTA OSS</h2>
                 <p class="kontakt_titlar">MAIL</p>
-                <p class="nummer">alba.moriwallin@elev.ga.ntig.style_index</p>
+                <p class="nummer">alba.moriwallin@elev.ga.ntig.se</p>
                 <p class="kontakt_titlar">TELEFONNUMMER</p>
                 <p class="nummer">076 807 93 11</p>
-            </div>
+            </nav>
 
-            <ul id="meny_2">
+            <ul class="meny">
                 <li> <a href="index.html" class="footer_lankar">BUTIK</a> </li> 
                 <li> <a href="om_oss.html" class="footer_lankar">OM OSS</a> </li>
                 <li> <a href="kundservice.html" class="footer_lankar">NÅGOT</a> </li>
@@ -73,5 +80,7 @@
 
     </div>
     
+    <script src="js/script.js"></script>
+
 </body>
 </html>

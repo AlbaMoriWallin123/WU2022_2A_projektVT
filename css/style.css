@@ -8,13 +8,12 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 340px 90px 900px 160px;
-    grid-template-areas: 
-        "he"
-        "na"
-        "se"
-        "fo"
-    ;
+    grid-template-areas: "he" "na" "se" "fo";
     gap: 3px;
+}
+
+#pil {
+    display: none;
 }
 
 #burger {
@@ -27,14 +26,15 @@ body {
 
 header {
     grid-area: he;
-    background-color: white;
+    background: url(/img/garn.jpg);
+    background-size: cover;
     display: grid;
     place-items: center;
 }
 
 nav {
     grid-area: na;
-    background-color: white;    
+    background-color: rgb(178, 250, 117);
 }
 
 section {
@@ -45,13 +45,14 @@ section {
 footer {
     grid-area: fo;
     display: flex;
-    background-color: white;
+    background-color: rgb(178, 250, 117);
     justify-content: center;
 }
 
+
 /* grund, meny & meny2 */
 
-#meny {
+.meny {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -73,10 +74,9 @@ footer {
 
 #huvud_bild {
     height: 340px;
-
 }
 
-#meny_2 {
+footer .meny {
     display: flex;
     justify-content: space-around;
     width: 60%;
@@ -87,7 +87,7 @@ footer {
 
 #kontaktuppgifter {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-evenly;
     height: 80%;
 }
@@ -125,6 +125,7 @@ footer {
     transform-origin: center top;
 }
 
+
 /* index, butik */
 
 .hund {
@@ -141,20 +142,16 @@ footer {
     align-content: space-around;
 }
 
-.verk {
-    position: relative;
-}
-
 .produkt_info_ruta {
     display: none;
     position: absolute;
     bottom: 4px;
     height: 40%;
     width: 100%;
-    background-color: green;
+    background-color: rgb(244, 250, 117);
 }
 
-.hund:hover + .produkt_info_ruta {
+.hund:hover+.produkt_info_ruta {
     display: block;
 }
 
@@ -164,6 +161,11 @@ footer {
     align-items: center;
     flex-direction: column;
     height: 100%;
+}
+
+.verk {
+    position: relative;
+    margin-block: 50px;
 }
 
 /* om oss */
@@ -176,7 +178,7 @@ footer {
 #om_sidan {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -184,12 +186,12 @@ footer {
 .om_text {
     height: 350px;
     width: 500px;
-    display: flex;
 }
+
 
 /* kundservice, något */
 
-#zoom_vaska  {
+#zoom_vaska {
     height: 800px;
     width: 550px;
 }
@@ -205,8 +207,6 @@ footer {
 }
 
 .guide {
-    display: flex;
-    flex-direction: column;
     width: 500px;
 }
 
@@ -217,11 +217,9 @@ footer {
     height: 80%;
 }
 
-.guide_text {
-
-}
-
 /* varukorg */
+
+
 /* allt */
 
 h2 {
@@ -229,49 +227,20 @@ h2 {
     font-weight: lighter;
 }
 
-
 @media screen and (max-width: 800px) {
-
+    
     #grid_wrapper {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 200px 90px 2500px 180px;
-        grid-template-areas: 
-            "he"
-            "na"
-            "se"
-            "fo"
-        ;
+        grid-template-rows: 200px 90px auto 180px;
+        grid-template-areas: "he" "na" "se" "fo";
         gap: 3px;
     }
-    
-    body {
-        background-color: black;
-    }
-    
-    header {
-        grid-area: he;
-        background-color: white;
-        display: grid;
-        place-items: center;
-    }
-    
-    section {
-        grid-area: se;
-        background-color: white;
-    }
-    
-    footer {
-        grid-area: fo;
-        display: flex;
-        background-color: white;
-        justify-content: space-evenly;
-    }
 
-    #meny_2 {
+    footer .meny {
         display: none;
     }
-    
+
     .produkt_info_ruta {
         display: none;
     }
@@ -285,62 +254,122 @@ h2 {
     }
 
     .om_text {
-        height: 244px;
-        width: 330px;
-        display: flex;
+        width: 310px;
+        height: auto;
     }
 
     .om_bild {
-        height: 245px;
-        width: 350px;
+        height: 217px;
+        width: 310px;
     }
 
     #om_sidan {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "om1" 
+        "om2" 
+        "om4" 
+        "om3";
+
+        place-items: center;
     }
 
-    #myBtn { /* Hidden by default */
-        position: fixed; /* Fixed/sticky position */
-        bottom: 20px; /* Place the button at the bottom of the page */
-        right: 30px; /* Place the button 30px from the right */
-        cursor: pointer; /* Add a mouse pointer on hover */
+    .om_text {
+        grid-area: om1;
+        margin-block: 50px;
+    }
+
+    .om_bild {
+        grid-area: om2;
+        margin-block: 20px;
+    }
+
+    #om_1 {
+        grid-area: om1;
+    }
+
+    #om_2 {
+        grid-area: om2;
+    }
+
+    #om_3 {
+        grid-area: om3;
+    }
+
+    #om_4 {
+        grid-area: om4;
+    }
+
+    .verk {
+        margin-block: 50px;
+    }
+
+    .guide {
+        width: 310px;
+    }
+   
+    #zoom_vaska {
+        display: none;
+    }
+
+    #info_rutor{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .guide {
+        width: 310px;
+        margin-top: 50px;
+
+    }
+
+    #myBtn {
+        position: fixed;
+        bottom: -45px;
+        right: -20px;
+        cursor: pointer;
         background: transparent;
-        border: 0;
+        border: 0; 
+        z-index: 1;
     }
 
     #pil {
-        height: 50px;
+        height: 200px;
+        display: block;
     }
-      
+
     #myBtn:hover {
         filter: brightness(110%);
     }
 
-    #meny {
+    .meny {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 500px;
+        height: 400px;
         align-items: center;
         background-color: aqua;
         position: absolute;
         right: 0;
         top: -500px;
-        width: 200px;
+        width: 250px;
         list-style: none;
-        transition: all 0,5;
+        transition: all 0, 5;
+        z-index: 1;
     }
 
-    .meny-active {
-        transform: translateY(600px);
+    .meny_active {
+        transform: translateY(793px);
     }
+
 
     .burger_line {
         width: 25px;
         height: 3px;
-        background-color: rgb(223,144,70);
+        background-color: rgb(223, 144, 70);
         margin: 5px;
         border-radius: 10%;
         transition: all 0.5s;
@@ -349,20 +378,18 @@ h2 {
     .crossed_line #line_2 {
         opacity: 0;
     }
-        
+
     .crossed_line #line_1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
-    
+
     .crossed_line #line_3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-    
+
     #burger {
         display: block;
         margin-right: 87.5px;
         cursor: pointer;
     }
 }
-
-
