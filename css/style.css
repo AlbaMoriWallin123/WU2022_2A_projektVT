@@ -28,13 +28,14 @@ header {
     grid-area: he;
     background: url(/img/garn.jpg);
     background-size: cover;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
     grid-area: na;
-    background-color: rgb(178, 250, 117);
+    background-color: white;
 }
 
 section {
@@ -45,7 +46,7 @@ section {
 footer {
     grid-area: fo;
     display: flex;
-    background-color: rgb(178, 250, 117);
+    background-color: white;    
     justify-content: center;
 }
 
@@ -70,10 +71,6 @@ footer {
 .meny_lankar:hover {
     font-size: 42px;
     color: rgb(153, 152, 152);
-}
-
-#huvud_bild {
-    height: 340px;
 }
 
 footer .meny {
@@ -120,9 +117,9 @@ footer {
     align-items: center;
 }
 
-#zoom {
-    text-align: center;
-    transform-origin: center top;
+#logga {
+    height: 400px;
+
 }
 
 
@@ -148,10 +145,11 @@ footer {
     bottom: 4px;
     height: 40%;
     width: 100%;
-    background-color: rgb(244, 250, 117);
+    background-color: rgb(244, 247, 176
+    );
 }
 
-.hund:hover+.produkt_info_ruta {
+.hund:hover + .produkt_info_ruta {
     display: block;
 }
 
@@ -245,12 +243,9 @@ h2 {
         display: none;
     }
 
-    .produkt_info_ruta_visa {
-        position: absolute;
-        bottom: 4px;
-        height: 40%;
-        width: 100%;
-        background-color: navajowhite;
+    .verk {
+        cursor: pointer;
+
     }
 
     .om_text {
@@ -276,18 +271,9 @@ h2 {
         place-items: center;
     }
 
-    .om_text {
-        grid-area: om1;
-        margin-block: 50px;
-    }
-
-    .om_bild {
-        grid-area: om2;
-        margin-block: 20px;
-    }
-
     #om_1 {
         grid-area: om1;
+        margin: 50px;
     }
 
     #om_2 {
@@ -296,14 +282,12 @@ h2 {
 
     #om_3 {
         grid-area: om3;
+        margin-bottom: 50px;
     }
 
     #om_4 {
         grid-area: om4;
-    }
-
-    .verk {
-        margin-block: 50px;
+        margin: 50px;
     }
 
     .guide {
@@ -320,10 +304,13 @@ h2 {
         justify-content: space-evenly;
     }
 
+    .hund:hover + .produkt_info_ruta {
+        display: none;
+    }
+
     .guide {
         width: 310px;
         margin-top: 50px;
-
     }
 
     #myBtn {
@@ -351,20 +338,21 @@ h2 {
         justify-content: space-around;
         height: 400px;
         align-items: center;
-        background-color: aqua;
+        background-color: white;
         position: absolute;
         right: 0;
         top: -500px;
         width: 250px;
         list-style: none;
-        transition: all 0, 5;
         z-index: 1;
+        border: 3px;
+        border-style: solid;
+        border-color: black;
     }
 
     .meny_active {
-        transform: translateY(793px);
+        transform: translateY(793.5px);
     }
-
 
     .burger_line {
         width: 25px;
@@ -389,7 +377,20 @@ h2 {
 
     #burger {
         display: block;
-        margin-right: 87.5px;
+        margin-left: 76%;
         cursor: pointer;
+    }
+
+    nav {
+        display: grid;
+        place-items: center;
+    }
+
+    #logga {
+        height: 260px;
+    }
+
+    #retur_ruta {
+        margin-bottom: 50px;
     }
 }
