@@ -125,7 +125,7 @@ footer {
 
 /* index, butik */
 
-.hund {
+.produkt {
     height: 340px;
     width: 320px;
 }
@@ -145,11 +145,10 @@ footer {
     bottom: 4px;
     height: 40%;
     width: 100%;
-    background-color: rgb(244, 247, 176
-    );
+    background-color: rgb(244, 247, 176);
 }
 
-.hund:hover + .produkt_info_ruta {
+.produkt:hover + .produkt_info_ruta {
     display: block;
 }
 
@@ -163,7 +162,7 @@ footer {
 
 .verk {
     position: relative;
-    margin-block: 50px;
+    margin: 50px;
 }
 
 /* om oss */
@@ -217,12 +216,43 @@ footer {
 
 /* varukorg */
 
+.produkt_varukorg {
+    height: 340px;
+    width: 320px;
+    margin: 30px;
+    margin-top: -20px;
+}
+
+.produkt_info_ruta_varukorg {
+    position: absolute;
+    top: -37px;
+    left: 330px;
+    background-color: rgb(244, 247, 176);
+    border: 20px;
+    border-style: solid;
+    border-color: rgb(244, 247, 176);
+}
+
+#produkter_varukorg {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 300px;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+#varukorg_titel {
+    font-size: 2rem;
+    margin: 30px;    
+}
 
 /* allt */
 
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -239,13 +269,21 @@ h2 {
         display: none;
     }
 
+    .verk {
+        margin: 100px;
+    }
+    
     .produkt_info_ruta {
-        display: none;
+        display: block;
+        position: relative;
+    }
+
+    #sista_hund {
+        margin-bottom: 200px;
     }
 
     .verk {
-        cursor: pointer;
-
+        cursor: default;
     }
 
     .om_text {
@@ -302,10 +340,6 @@ h2 {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-    }
-
-    .hund:hover + .produkt_info_ruta {
-        display: none;
     }
 
     .guide {
@@ -392,5 +426,21 @@ h2 {
 
     #retur_ruta {
         margin-bottom: 50px;
+    }
+
+    .produkt_varukorg {
+        margin: -73px;
+        margin-bottom: 50px;
+        height: 100%;
+    }
+
+    .produkt_info_ruta_varukorg {
+        position: absolute;
+        top: -37px;
+        left: 330px;
+        background-color: rgb(244, 247, 176);
+        border: 20px;
+        border-style: solid;
+        border-color: rgb(244, 247, 176);
     }
 }
