@@ -177,7 +177,7 @@ footer {
     margin: 50px;
 }
 
-#info_text {
+.info_text {
     font-family: 'BIZ UDMincho', serif;
 }
 
@@ -472,16 +472,17 @@ h2 {
     /* Varukorg */
 
     .produkt_varukorg {
-        margin: -73px;
-        margin-bottom: 150px;
-        height: 100%;
+        margin: -60px;
+        margin-bottom: 120px;
+        height: 278px;
+        width: auto;
     }
 
     .produkt_info_ruta_varukorg {
         position: absolute;
-        left: -73px;
-        top: 250px;
-        height: 175px;
+        left: -52px;
+        top: 185px;
+        height: 200px;
         width: 280px;
         background-color: rgb(197, 198, 202);
         border: 20px;
